@@ -1,5 +1,3 @@
-use std::{ops::{Index, IndexMut}, vec};
-
 type Shape = (usize, usize);
 
 pub struct Matrix<T> {
