@@ -1,4 +1,4 @@
-use std::{ops::Index, vec};
+use std::{ops::{Index, IndexMut}, vec};
 
 type Shape = (usize, usize);
 
@@ -29,17 +29,4 @@ impl<T: Default + Clone> Matrix<T> {
     pub fn get_data(&self) -> &Vec<Vec<T>> {
         &self.data
     }
-}
-
-impl<T> Index<usize> for Matrix<T> {
-    type Output = Vec<T>;
-
-    fn index(&self, row: usize) -> &Self::Output {
-        &self.data[row]
-    }
-}
-
-#[cfg(test)]
-pub mod tests {
-    
 }
